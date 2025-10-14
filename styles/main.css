@@ -84,7 +84,6 @@ a:focus-visible {
   top: 0;
   z-index: 100;
   background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(12px);
 }
 
@@ -378,7 +377,6 @@ a:focus-visible {
   width: 100%;
   padding: 2.5rem;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
 }
@@ -416,8 +414,6 @@ a:focus-visible {
 .projects {
   padding: 5.5rem 0;
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .projects__grid {
@@ -609,8 +605,6 @@ section {
 
 .showcase {
   background: var(--color-surface-alt);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .showcase__grid {
@@ -664,8 +658,6 @@ section {
 
 .support {
   background: var(--color-surface-alt);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .support__inner {
@@ -693,6 +685,18 @@ section {
   text-align: center;
   color: var(--color-muted);
   font-size: 0.92rem;
+  position: relative;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 1px;
+  background: var(--color-border);
 }
 
 .site-footer__link {
@@ -862,6 +866,10 @@ body[data-theme="dark"] .mode-toggle:focus-visible {
   .support__inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .about__text {
+    padding: 2rem 1.5rem;
   }
 
   .timeline {

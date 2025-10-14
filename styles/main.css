@@ -111,12 +111,14 @@ a:focus-visible {
   align-items: center;
   gap: 1rem;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .nav-icon {
@@ -757,12 +759,40 @@ body[data-theme="dark"] .mode-toggle:focus-visible {
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .nav-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .nav-icon svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .mode-toggle {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
   }
 
   .hero {
     padding-top: 4.5rem;
+  }
+
+  .hero__title-wrapper {
+    gap: 1rem;
+  }
+
+  .hero__profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero__title {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
   }
 
   .hero__actions {

@@ -118,11 +118,14 @@
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero__container container">
           <div class="hero__intro">
-            <p class="hero__eyebrow">Developer &middot; Tech, Design, AI</p>
-            <h1 class="hero__title" id="hero-title">
-              &#x1F44B; Hi, I'm Barry.
-            </h1>
+            <div class="hero__title-wrapper">
+              <img src="images/profile.jpg" alt="Barry's profile picture" class="hero__profile-pic" />
+              <h1 class="hero__title" id="hero-title">
+                &#x1F44B; Hi, I'm Barry.
+              </h1>
+            </div>
             <p class="hero__description">
+              <span class="hero__eyebrow">Developer &middot; Tech, Design, AI</span><br>
               A passionate developer exploring tech, design, and AI-driven
               solutions.
             </p>
@@ -174,21 +177,56 @@
             <article class="project-card">
               <h3 class="project-card__heading">Signature Projects</h3>
               <p class="project-card__description">
-                Multi-year builds and partnerships where I owned end-to-end
-                delivery.
+                Signature Personal and School Projects that I built throught my college years.
               </p>
-              <ul class="project-card__list">
-                <li>
-                  <strong>Neurogrid OS</strong> - Operational intelligence hub
-                  aligning AI copilots with human workflows.
+              <ul class="timeline timeline--projects">
+                <li class="timeline__item timeline__item--current">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/Portfolio"
+                      target="_blank"
+                      rel="noopener"
+                      >Portfolio</a
+                    >
+                    <p class="timeline__description">
+                      Personal site and resume hub showcasing current skills,
+                      stack, and active experiments.
+                    </p>
+                  </div>
                 </li>
-                <li>
-                  <strong>Signal Loom</strong> - Automation kit synchronizing
-                  creative briefs, assets, and delivery.
+                <li class="timeline__item timeline__item--current">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/Iligan-construction-supply"
+                      target="_blank"
+                      rel="noopener"
+                      >Iligan-construction-supply</a
+                    >
+                    <p class="timeline__description">
+                      Business platform concept streamlining inventory and orders
+                      for local suppliers.
+                    </p>
+                  </div>
                 </li>
-                <li>
-                  <strong>Compass ML</strong> - Experimentation studio bundling
-                  evaluation, reporting, and governance.
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/iligan2l"
+                      target="_blank"
+                      rel="noopener"
+                      >iligan2l</a
+                    >
+                    <p class="timeline__description">
+                      Location-driven service directory helping residents
+                      discover essential resources around Iligan.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </article>
@@ -197,48 +235,84 @@
               <p class="project-card__description">
                 Fresh commits and experiments straight from GitHub.
               </p>
-              <ul class="project-card__repos">
-                <li>
-                  <a href="https://github.com/barryillest/Portfolio" target="_blank" rel="noopener"
-                    >Portfolio</a
-                  >
-                  <span class="project-card__meta">Updated Oct 14, 2025</span>
+              <ul class="timeline timeline--repos">
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/Portfolio"
+                      target="_blank"
+                      rel="noopener"
+                      >Portfolio</a
+                    >
+                    <span class="timeline__meta">Updated Oct 14, 2025</span>
+                  </div>
                 </li>
-                <li>
-                  <a
-                    href="https://github.com/barryillest/Iligan-construction-supply"
-                    target="_blank"
-                    rel="noopener"
-                    >Iligan-construction-supply</a
-                  >
-                  <span class="project-card__meta">Updated Oct 13, 2025</span>
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/Iligan-construction-supply"
+                      target="_blank"
+                      rel="noopener"
+                      >Iligan-construction-supply</a
+                    >
+                    <span class="timeline__meta">Updated Oct 13, 2025</span>
+                  </div>
                 </li>
-                <li>
-                  <a href="https://github.com/barryillest/iligan2l" target="_blank" rel="noopener"
-                    >iligan2l</a
-                  >
-                  <span class="project-card__meta">Updated Oct 13, 2025</span>
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/iligan2l"
+                      target="_blank"
+                      rel="noopener"
+                      >iligan2l</a
+                    >
+                    <span class="timeline__meta">Updated Oct 13, 2025</span>
+                  </div>
                 </li>
-                <li>
-                  <a href="https://github.com/barryillest/student-system" target="_blank" rel="noopener"
-                    >student-system</a
-                  >
-                  <span class="project-card__meta">Updated Oct 13, 2025</span>
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/student-system"
+                      target="_blank"
+                      rel="noopener"
+                      >student-system</a
+                    >
+                    <span class="timeline__meta">Updated Oct 13, 2025</span>
+                  </div>
                 </li>
-                <li>
-                  <a href="https://github.com/barryillest/systematic" target="_blank" rel="noopener"
-                    >systematic</a
-                  >
-                  <span class="project-card__meta">Updated Oct 13, 2025</span>
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/systematic"
+                      target="_blank"
+                      rel="noopener"
+                      >systematic</a
+                    >
+                    <span class="timeline__meta">Updated Oct 13, 2025</span>
+                  </div>
                 </li>
-                <li>
-                  <a
-                    href="https://github.com/barryillest/hc-iligan-backend"
-                    target="_blank"
-                    rel="noopener"
-                    >hc-iligan-backend</a
-                  >
-                  <span class="project-card__meta">Updated Oct 13, 2025</span>
+                <li class="timeline__item">
+                  <span class="timeline__marker" aria-hidden="true"></span>
+                  <div class="timeline__body">
+                    <a
+                      class="timeline__title"
+                      href="https://github.com/barryillest/hc-iligan-backend"
+                      target="_blank"
+                      rel="noopener"
+                      >hc-iligan-backend</a
+                    >
+                    <span class="timeline__meta">Updated Oct 13, 2025</span>
+                  </div>
                 </li>
               </ul>
               <a
@@ -475,7 +549,7 @@
     <footer class="site-footer" aria-labelledby="footer-note">
       <div class="container">
         <p class="site-footer__note" id="footer-note">
-          © 2025 Barry B. Ortega. All rights reserved.
+          (c) 2025 Barry B. Ortega. All rights reserved.
         </p>
         <a class="site-footer__link" href="#top">Back to top &uarr;</a>
       </div>

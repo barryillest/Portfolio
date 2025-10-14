@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barry Ortega | Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Barry Ortega is a developer exploring tech, design, and AI-driven solutions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var storageKey = "theme-preference";
+        try {
+          var persisted = localStorage.getItem(storageKey);
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme =
+            persisted === "dark" ||
+            (persisted === null && prefersDark)
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body class="page" id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <div class="nav__inner container">
+          <a class="brand" href="#top">Barry Ortega</a>
+          <div class="nav-links" role="group" aria-label="Primary navigation">
+            <a class="nav-icon" href="#hero" aria-label="Home">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 3 3 11h3v9h5v-6h2v6h5v-9h3Z" />
+              </svg>
+            </a>
+            <a class="nav-icon" href="#projects" aria-label="Projects">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"
+                />
+              </svg>
+            </a>
+            <a class="nav-icon" href="#stack" aria-label="Tech Stack">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 6h16v2H4Zm0 5h16v2H4Zm0 5h16v2H4Z" />
+              </svg>
+            </a>
+            <a class="nav-icon" href="#showcase" aria-label="Showcase">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m12 3.3 2.7 5.7 6.2.5-4.8 4.2 1.4 6-5.5-3.2-5.5 3.2 1.4-6-4.8-4.2 6.2-.5Z" />
+              </svg>
+            </a>
+            <a class="nav-icon" href="#quote" aria-label="Quote">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 6h6v6H9v3H5v-3c0-2.7 1.5-5.1 3.4-6Zm10 0h6v6h-2v3h-4v-3c0-2.7 1.5-5.1 3.4-6Z" />
+              </svg>
+            </a>
+            <a class="nav-icon" href="#support" aria-label="Support">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21 3.5 12.5a5 5 0 0 1 7-7l1.5 1.5L13.5 5.5a5 5 0 0 1 7 7Z" />
+              </svg>
+            </a>
+            <a
+              class="nav-icon"
+              href="https://github.com/barryillest/barryillest/edit/main/README.md"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.3-1.4-3.3-1.4-.5-1.1-1.2-1.5-1.2-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1.1 1.5 1.1.9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.2-4.5-1.1-4.5-4.9 0-1.1.3-2 .9-2.7-.1-.3-.5-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.3.2 2.3.1 2.6.6.7.9 1.6.9 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" />
+              </svg>
+            </a>
+          </div>
+          <button
+            class="mode-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <span class="mode-toggle__icon mode-toggle__icon--sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path
+                  d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0-5h1v3h-1V2ZM12 19h1v3h-1v-3ZM4.22 4.22l.7-.7L7.24 5.86l-.7.7ZM16.76 17.66l.7-.7 2.32 2.32-.7.7ZM2 11h3v1H2v-1Zm17 0h3v1h-3v-1ZM4.22 19.78 7.24 16.7l.7.7-3.02 3.07-.7-.7ZM16.76 6.3l2.32-2.32.7.7-2.32 2.32-.7-.7Z"
+                />
+              </svg>
+            </span>
+            <span class="mode-toggle__icon mode-toggle__icon--moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path
+                  d="M12.2 3a9 9 0 1 0 8.8 11.06 7 7 0 0 1-8.45-9.63 9.1 9.1 0 0 0-.35-1.43Z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero__container container">
+          <div class="hero__intro">
+            <p class="hero__eyebrow">Developer &middot; Tech, Design, AI</p>
+            <h1 class="hero__title" id="hero-title">
+              &#x1F44B; Hi, I'm Barry.
+            </h1>
+            <p class="hero__description">
+              A passionate developer exploring tech, design, and AI-driven
+              solutions.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="#stack">View Tech Stack</a>
+              <a
+                class="button button--ghost"
+                href="https://github.com/barryillest/barryillest/edit/main/README.md"
+                target="_blank"
+                rel="noopener"
+                >GitHub Profile</a
+              >
+              <a class="button button--ghost" href="#support">Support Me</a>
+            </div>
+          </div>
+          <div class="hero__details">
+            <div class="hero__card">
+              <p class="hero__card-label">Focus</p>
+              <p class="hero__card-text">
+                Crafting intuitive interfaces with automation in mind, blending
+                product, design, and AI into meaningful experiences.
+              </p>
+            </div>
+            <div class="hero__card hero__card--highlight">
+              <p class="hero__card-label">Current explorations</p>
+              <ul class="hero__card-list">
+                <li>AI-powered design systems</li>
+                <li>Developer tooling for focused workflows</li>
+                <li>Community-driven knowledge sharing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hero__banner" role="status">
+          <div class="hero__banner-pill">Always Learning</div>
+          <p>Designing calm, resilient software for teams who value clarity.</p>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">&#x1F4CB; Projects</p>
+            <h2 class="section__title" id="projects-title">
+              Projects shaping thoughtful, AI-aware experiences.
+            </h2>
+          </div>
+          <div class="projects__grid">
+            <article class="project-card">
+              <h3 class="project-card__heading">Signature Projects</h3>
+              <p class="project-card__description">
+                Multi-year builds and partnerships where I owned end-to-end
+                delivery.
+              </p>
+              <ul class="project-card__list">
+                <li>
+                  <strong>Neurogrid OS</strong> - Operational intelligence hub
+                  aligning AI copilots with human workflows.
+                </li>
+                <li>
+                  <strong>Signal Loom</strong> - Automation kit synchronizing
+                  creative briefs, assets, and delivery.
+                </li>
+                <li>
+                  <strong>Compass ML</strong> - Experimentation studio bundling
+                  evaluation, reporting, and governance.
+                </li>
+              </ul>
+            </article>
+            <article class="project-card project-card--recent">
+              <h3 class="project-card__heading">Recent Projects</h3>
+              <p class="project-card__description">
+                A snapshot of the latest releases and experiments.
+              </p>
+              <ul class="project-card__timeline">
+                <li>
+                  <span class="project-card__time">2025</span>
+                  <span class="project-card__title">Calmstack Assist</span>
+                  <span class="project-card__text"
+                    >Design ops copilot reducing review cycles by 35%.</span
+                  >
+                </li>
+                <li>
+                  <span class="project-card__time">2024</span>
+                  <span class="project-card__title">Atlas UI Refresh</span>
+                  <span class="project-card__text"
+                    >Systemised dashboard kit adopted across four product
+                    surfaces.</span
+                  >
+                </li>
+                <li>
+                  <span class="project-card__time">2024</span>
+                  <span class="project-card__title">Prompt Cartographer</span>
+                  <span class="project-card__text"
+                    >Mapping workflow for reproducible prompt research.</span
+                  >
+                </li>
+              </ul>
+              <a
+                class="project-card__link"
+                href="https://github.com/barryillest"
+                target="_blank"
+                rel="noopener"
+                >Browse more on GitHub &rarr;</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stack" id="stack" aria-labelledby="stack-title">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">&#x1F4BB; Tech Stack</p>
+            <h2 class="section__title" id="stack-title">
+              Tools that shape the products I build.
+            </h2>
+          </div>
+          <div class="stack__grid">
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F3A8; Frontend</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/HTML5-0b0b0b?style=for-the-badge&logo=html5&logoColor=white"
+                  alt="HTML5 badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/CSS3-0b0b0b?style=for-the-badge&logo=css3&logoColor=white"
+                  alt="CSS3 badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/JavaScript-0b0b0b?style=for-the-badge&logo=javascript&logoColor=white"
+                  alt="JavaScript badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/TypeScript-0b0b0b?style=for-the-badge&logo=typescript&logoColor=white"
+                  alt="TypeScript badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/React-0b0b0b?style=for-the-badge&logo=react&logoColor=white"
+                  alt="React badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/React%20Native-0b0b0b?style=for-the-badge&logo=react&logoColor=white"
+                  alt="React Native badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x2699;&#xFE0F; Backend</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/Python-0b0b0b?style=for-the-badge&logo=python&logoColor=white"
+                  alt="Python badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Java-0b0b0b?style=for-the-badge&logo=openjdk&logoColor=white"
+                  alt="Java badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/PHP-0b0b0b?style=for-the-badge&logo=php&logoColor=white"
+                  alt="PHP badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Django-0b0b0b?style=for-the-badge&logo=django&logoColor=white"
+                  alt="Django badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Node.js-0b0b0b?style=for-the-badge&logo=node.js&logoColor=white"
+                  alt="Node.js badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F5C4;&#xFE0F; Database</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/MySQL-0b0b0b?style=for-the-badge&logo=mysql&logoColor=white"
+                  alt="MySQL badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/MariaDB-0b0b0b?style=for-the-badge&logo=mariadb&logoColor=white"
+                  alt="MariaDB badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/PostgreSQL-0b0b0b?style=for-the-badge&logo=postgresql&logoColor=white"
+                  alt="PostgreSQL badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/SQLite-0b0b0b?style=for-the-badge&logo=sqlite&logoColor=white"
+                  alt="SQLite badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F9E0; AI &amp; Machine Learning</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/ChatGPT-0b0b0b?style=for-the-badge&logo=openai&logoColor=white"
+                  alt="ChatGPT badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Claude%20Code-0b0b0b?style=for-the-badge&logo=anthropic&logoColor=white"
+                  alt="Claude Code badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Prompt%20Engineering-0b0b0b?style=for-the-badge&logo=prometheus&logoColor=white"
+                  alt="Prompt Engineering badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F9F0; Tools &amp; Design</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/Figma-0b0b0b?style=for-the-badge&logo=figma&logoColor=white"
+                  alt="Figma badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Photoshop-0b0b0b?style=for-the-badge&logo=adobephotoshop&logoColor=white"
+                  alt="Photoshop badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/PowerShell-0b0b0b?style=for-the-badge&logo=powershell&logoColor=white"
+                  alt="PowerShell badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F4BB; IDE &amp; Development</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/Visual%20Studio%20Code-0b0b0b?style=for-the-badge&logo=visualstudiocode&logoColor=white"
+                  alt="Visual Studio Code badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Windsurf-0b0b0b?style=for-the-badge&logo=vercel&logoColor=white"
+                  alt="Windsurf badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Cursor-0b0b0b?style=for-the-badge&logo=cursor&logoColor=white"
+                  alt="Cursor badge"
+                />
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <h3 class="stack-card__title">&#x1F9EE; Hardware &amp; Version Control</h3>
+              <div class="badge-grid">
+                <img
+                  src="https://img.shields.io/badge/Arduino-0b0b0b?style=for-the-badge&logo=arduino&logoColor=white"
+                  alt="Arduino badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/Git-0b0b0b?style=for-the-badge&logo=git&logoColor=white"
+                  alt="Git badge"
+                />
+                <img
+                  src="https://img.shields.io/badge/GitHub-0b0b0b?style=for-the-badge&logo=github&logoColor=white"
+                  alt="GitHub badge"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase" id="showcase" aria-labelledby="showcase-title">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">&#x1F4CA; Showcase</p>
+            <h2 class="section__title" id="showcase-title">
+              Glimpses into what I am building and learning.
+            </h2>
+          </div>
+          <div class="showcase__grid">
+            <article class="showcase-card">
+              <h3 class="showcase-card__title">Top Languages</h3>
+              <p class="showcase-card__description">
+                Tracking the languages that power my recent projects.
+              </p>
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=barryillest&theme=graywhite&hide_border=true&include_all_commits=true&count_private=true&layout=compact"
+                alt="GitHub top languages chart for Barry Ortega"
+              />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote" id="quote" aria-labelledby="quote-title">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">&#x2756; Random Dev Quote</p>
+            <h2 class="section__title" id="quote-title">
+              Inspiration for the build sessions ahead.
+            </h2>
+          </div>
+          <div class="quote__card">
+            <img
+              src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"
+              alt="Random developer quote"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="support" id="support" aria-labelledby="support-title">
+        <div class="container support__inner">
+          <div>
+            <p class="section__eyebrow">&#x1F4B0; Support Me</p>
+            <h2 class="support__title" id="support-title">
+              Appreciate the craft? Fuel future experiments.
+            </h2>
+            <p class="support__description">
+              Your support helps create more guides, open-source drops, and
+              explorations in AI-driven product design.
+            </p>
+          </div>
+          <a class="button" href="https://paypal.me/subtozhc">Donate via PayPal</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-labelledby="footer-note">
+      <div class="container">
+        <p class="site-footer__note" id="footer-note">
+          © 2025 Barry B. Ortega. All rights reserved.
+        </p>
+        <a class="site-footer__link" href="#top">Back to top &uarr;</a>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        const storageKey = "theme-preference";
+        const toggle = document.querySelector(".mode-toggle");
+        if (!toggle) {
+          return;
+        }
+
+        const getPreference = () => {
+          let storedTheme = null;
+          try {
+            storedTheme = localStorage.getItem(storageKey);
+          } catch (error) {
+            storedTheme = null;
+          }
+          if (storedTheme === "light" || storedTheme === "dark") {
+            return storedTheme;
+          }
+          return window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        };
+
+        const setPreference = (theme) => {
+          document.documentElement.setAttribute("data-theme", theme);
+          if (document.body) {
+            document.body.setAttribute("data-theme", theme);
+          }
+          try {
+            localStorage.setItem(storageKey, theme);
+          } catch (error) {
+            /* ignore write failures */
+          }
+          toggle.setAttribute("aria-pressed", theme === "dark");
+        };
+
+        const mediaQuery = window.matchMedia
+          ? window.matchMedia("(prefers-color-scheme: dark)")
+          : null;
+
+        const handleSchemeChange = (event) => {
+          setPreference(event.matches ? "dark" : "light");
+        };
+
+        setPreference(getPreference());
+        toggle.addEventListener("click", () => {
+          const currentTheme =
+            document.body.getAttribute("data-theme") ||
+            document.documentElement.getAttribute("data-theme") ||
+            "light";
+          const nextTheme = currentTheme === "dark" ? "light" : "dark";
+          setPreference(nextTheme);
+        });
+
+        if (mediaQuery) {
+          if (typeof mediaQuery.addEventListener === "function") {
+            mediaQuery.addEventListener("change", handleSchemeChange);
+          } else if (typeof mediaQuery.addListener === "function") {
+            mediaQuery.addListener(handleSchemeChange);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

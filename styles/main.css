@@ -361,6 +361,58 @@ a:focus-visible {
   font-size: 0.95rem;
 }
 
+.about {
+  padding: 5.5rem 0;
+  background: var(--color-background);
+}
+
+.about__content {
+  margin: 0 auto;
+  width: min(var(--max-width), calc(100% - 3rem));
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about__text {
+  width: 100%;
+  padding: 2.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.about__text .section__header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about__text .section__eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.about__text p {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+.about__text strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .projects {
   padding: 5.5rem 0;
   background: var(--color-surface);

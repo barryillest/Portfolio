@@ -427,15 +427,15 @@ a:focus-visible {
   width: 12px;
   height: 12px;
   border-radius: 999px;
-  background: var(--color-surface);
-  border: 2px solid var(--timeline-line);
+  background: #000;
+  border: 2px solid #000;
   transform: translate(-50%, 0.5rem);
   transition: background var(--transition-base), border-color var(--transition-base);
 }
 
 .timeline__item--current .timeline__marker {
-  background: var(--color-text);
-  border-color: var(--color-text);
+  background: #000;
+  border-color: #000;
 }
 
 .timeline__marker:hover,

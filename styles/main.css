@@ -726,7 +726,7 @@ body[data-theme="dark"] .mode-toggle:focus-visible {
 
   .nav-controls {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 0.75rem;
     margin-left: 0;
   }

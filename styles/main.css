@@ -159,6 +159,7 @@ a:focus-visible {
   color: var(--color-text);
   border-radius: 999px;
   padding: 0.4rem 0.85rem;
+  height: 2.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -236,7 +237,7 @@ a:focus-visible {
 
 .hero__title {
   margin: 0;
-  font-size: clamp(2.6rem, 5vw, 3.6rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   line-height: 1.1;
 }
@@ -731,8 +732,8 @@ body[data-theme="dark"] .mode-toggle:focus-visible {
   }
 
   .mode-toggle {
-    margin-top: 0.75rem;
-    margin-left: auto;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .hero__container {
@@ -776,6 +777,7 @@ body[data-theme="dark"] .mode-toggle:focus-visible {
   .mode-toggle {
     padding: 0.35rem 0.7rem;
     font-size: 0.85rem;
+    height: 2.2rem;
   }
 
   .hero {

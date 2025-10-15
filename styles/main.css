@@ -302,7 +302,7 @@ a:focus-visible {
 }
 
 .hero__card--highlight {
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
 }
 
 .hero__card-label {
@@ -410,7 +410,7 @@ a:focus-visible {
 
 .projects {
   padding: 5.5rem 0;
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
 }
 
 .projects__grid {
@@ -430,7 +430,7 @@ a:focus-visible {
 }
 
 .project-card--recent {
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
 }
 
 .project-card__heading {
@@ -566,7 +566,7 @@ section {
 }
 
 .stack-card {
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
   border-radius: var(--radius-large);
   padding: 1.8rem;
   border: 1px solid var(--color-border);
@@ -611,7 +611,7 @@ section {
 }
 
 .showcase-card {
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
   border-radius: var(--radius-large);
   border: 1px solid var(--color-border);
   padding: 2rem;
@@ -636,7 +636,7 @@ section {
 }
 
 .quote {
-  background: var(--color-surface);
+  /*background: var(--color-surface);*/
 }
 
 .quote__card {

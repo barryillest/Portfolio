@@ -119,7 +119,7 @@
         <div class="hero__container container">
           <div class="hero__intro">
             <div class="hero__title-wrapper">
-              <img src="images/profile.jpg" alt="Barry's profile picture" class="hero__profile-pic" />
+              <img src="images/profile.jpg" alt="Barry's profile picture" class="hero__profile-pic" data-hover="images/profile2.jpg" data-original="images/profile.jpg" />
               <h1 class="hero__title" id="hero-title">
                 &#x1F44B;I'm Barry.
               </h1>
@@ -655,6 +655,36 @@
           } else if (typeof mediaQuery.addListener === "function") {
             mediaQuery.addListener(handleSchemeChange);
           }
+        }
+
+        // Profile picture hover and click functionality
+        const profilePic = document.querySelector(".hero__profile-pic");
+        if (profilePic) {
+          let isHovering = false;
+
+          profilePic.addEventListener("mouseenter", () => {
+            isHovering = true;
+            profilePic.src = profilePic.dataset.hover;
+          });
+
+          profilePic.addEventListener("mouseleave", () => {
+            isHovering = false;
+            // Delay the reset to allow for click events
+            setTimeout(() => {
+              if (!isHovering) {
+                profilePic.src = profilePic.dataset.original;
+              }
+            }, 100);
+          });
+
+          profilePic.addEventListener("click", () => {
+            // Toggle between original and hover image on click
+            if (profilePic.src.includes(profilePic.dataset.hover)) {
+              profilePic.src = profilePic.dataset.original;
+            } else {
+              profilePic.src = profilePic.dataset.hover;
+            }
+          });
         }
       })();
     </script>

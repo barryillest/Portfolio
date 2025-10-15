@@ -775,7 +775,7 @@ body[data-theme="dark"] .hero__banner {
 
 :root[data-theme="dark"] .about__content,
 body[data-theme="dark"] .about__content {
-  border-color: transparent;
+  /* border-color: transparent; */
 }
 
 :root[data-theme="dark"] .nav-icon,
